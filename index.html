@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donasi</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar Mulai -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">Donasi<span>Yuk</span>.</a>
+
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Donasi Terkumpul</a>
+            <a href="#donasi">Jenis Donasi</a>
+            <a href="#contact">Kontak</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="search-button"><i data-feather="search"></i></a>
+            <a href="#" id="log-in-button"><i data-feather="log-in"></i></a>
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+        <!-- Search Form start -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box"><i data-feather="search"></i></label>
+        </div>
+        <!-- Search Form end -->
+
+        <!-- Donasi Cart Start -->
+        <div class="donasi-cart">
+            <div class="cart-items">
+                <div class="donasi-detail">
+                    <br></br>
+                    <p class="icon-with-text">
+                        <span data-feather="user"></span>
+                        <span>Selamat Datang, username</span>
+                    </p>
+                    <br></br>
+                    <form class="form-signin" method="post" action="cek_login.php">
+                        <div class="text-center mb-4">
+                            <h1 class="h3 mb-3 font-weight-normal">Login DonasiYuk.</h1>
+                            <p class="a1">Dompet Elit, Donasi Syulit</p>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="text" id="username" name="username" class="form-control" required autofocus>
+                            <label for="username">Username</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" id="password" name="password" class="form-control" required
+                                autofocus>
+                            <label for="password">Password</label>
+                        </div>
+
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                        <button class="btn btn-lg btn-primary btn-block" type="button"
+                            onclick="location.href='noakun.php';">Tidak Punya Akun?</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Donasi Cart End -->
+
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <h1>Mari Kita <span>Donasi</span></h1>
+            <p>Dompet Elit, Donasi Syulit. Kita gak maksa kok</p>
+            <a href="#donasi" class="cta" id="log-in-button" onclick="toggleDonasiCart(event)">Donasi Sekarang</a>
+        </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
+        <h2><span>Tentang</span> Kami</h2>
+
+        <div class="row">
+            <div class="about-img">
+                <img src="img/tentang-kami-bg.png" alt="Tentang Kami">
+            </div>
+            <div class="content">
+                <h3>Kenapa berdonasi disini?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga eveniet iusto,
+                    veritatis sit quaerat non corporis facere, hic officia quod minus numquam id amet voluptate. Atque
+                    quae eius commodi error?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquam aperiam praesentium eveniet sequi adipisci, eligendi dignissimos provident?
+                    Veniam voluptas, ducimus aperiam mollitia temporibus fugit blanditiis id debitis delectus. Quaerat,
+                    animi!
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Menu Section Start -->
+    <section id="menu" class="menu">
+        <h2><span>Donasi</span> Terkumpul</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium ipsa a, non recusandae fuga quidem!</p>
+
+        <div class="row">
+            <div class="menu-card">
+                <img src="img/menu/menu-bg-1.jpg" alt="Kesehatan" class="menu-card-img">
+                <h3 class="menu-card-title">Kesehatan</h3>
+                <p class="menu-card-total-donasi">innalillahi wa'inna'ilaihii roojiuun, there has been an earthquake
+                    with a magnitude of 7.8 in Turkey. Victims reached up to 10,000 people and material...</p>
+                <p class="totaluang">RP.15.000.000</p>
+            </div>
+            <div class="menu-card">
+                <img src="img/menu/menu-bg-2.jpg" alt="Makanan" class="menu-card-img">
+                <h3 class="menu-card-title">Pendidikan</h3>
+                <p class="menu-card-total-donasi">Empower Out-of-School Children: Support Our Education Fund Dear
+                    Supporters, We are reaching out to you today to raise awareness and funds for out-of-school
+                    children. In many parts of the world.</p>
+                <p class="totaluang">RP.15.000.000</p>
+            </div>
+            <div class="menu-card">
+                <img src="img/menu/menu-bg-3.jpg" alt="Pendidikan" class="menu-card-img">
+                <h3 class="menu-card-title">Makanan</h3>
+                <p class="menu-card-total-donasi">Empower Out-of-School Children: Support Our Education Fund Dear
+                    Supporters, We are reaching out to you today to raise awareness and funds for out-of-school
+                    children. In many parts of the world. </p>
+                <p class="totaluang">RP.15.000.000</p>
+            </div>
+        </div>
+    </section>
+    <!-- Menu Section End -->
+
+    <!-- Jenis Donasi Start -->
+
+    <section class="donasi" id="donasi">
+        <h2><span>Jenis</span> Donasi</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium ipsa a, non recusandae fuga quidem!</p>
+
+        <div class="row">
+            <div class="donasi-card">
+                <div class="donasi-icons">
+                    <a href="#" class="info-detail-button-kesehatan"><i data-feather="eye"></i></a>
+                </div>
+                <div class="donasi-image">
+                    <img src="img/donasi/kesehatan.png" alt="Jenis Donasi 1">
+                </div>
+                <div class="donasi-content">
+                    <h3>Kesehatan</h3>
+                    <div class="kirim-kesehatan">
+                        <button type="submit" class="btn item-detail-button" >Donasi Sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="donasi-card">
+                <div class="donasi-icons">
+                    <a href="#" class="info-detail-button-pendidikan"><i data-feather="eye"></i></a>
+                </div>
+                <div class="donasi-image">
+                    <img src="img/donasi/pendidikan.png" alt="Jenis Donasi 1">
+                </div>
+                <div class="donasi-content">
+                    <h3>Pendidkan</h3>
+                    <div class="kirim-kesehatan">
+                        <button type="submit" class="btn item-detail-button-pendidikan">Donasi Sekarang</button>
+                    </div>
+                </div>
+            </div>
+            <div class="donasi-card">
+                <div class="donasi-icons">
+                    <a href="#" class="info-detail-button-makanan"><i data-feather="eye"></i></a>
+                </div>
+                <div class="donasi-image">
+                    <img src="img/donasi/makanan.png" alt="Jenis Donasi 1">
+                </div>
+                <div class="donasi-content">
+                    <h3>Makanan</h3>
+                    <div class="kirim-kesehatan">
+                        <button type="submit" class="btn item-detail-button-makanan">Donasi Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Jenis Donasi End -->
+
+    <!-- Menu Kontak Start -->
+
+    <section id="contact" class="contact">
+        <h2><span>Hubungi</span> Kami</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium ipsa a, non recusandae fuga quidem!</p>
+
+        <div class="row">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103661.73174976751!2d139.9310396!3d35.71566365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601886d6050f14c7%3A0xff20e99af91ac539!2sIchikawa%2C%20Prefektur%20Chiba%2C%20Jepang!5e0!3m2!1sid!2sid!4v1704267086416!5m2!1sid!2sid"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form action="">
+                <div class="input-group">
+                    <i data-feather="user"></i>
+                    <input type="text" placeholder="nama">
+                </div>
+                <div class="input-group">
+                    <i data-feather="mail"></i>
+                    <input type="text" placeholder="email">
+                </div>
+                <div class="input-group">
+                    <i data-feather="phone"></i>
+                    <input type="text" placeholder="no telp.">
+                </div>
+                <button type="submit" class="btn">kirim pesan</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Menu Kontak End  -->
+
+    <!-- Footer Start -->
+
+    <footer>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang Kami</a>
+            <a href="#menu">Donasi Terkumpul</a>
+            <a href="#contact">Kontak</a>
+        </div>
+
+        <div class="credits">
+            <p>Dibuat oleh <a href="">Magang Uinsa</a>. | &copy; 2024.</p>
+        </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <!-- Modal Box Donasi Detail, Untuk Form Donasi -->
+
+    <div class="modal" id="donasi-detail-modal">
+        <div class="modal-container">
+            <a href="#" class="close-icon"><i data-feather="x"></i></a>
+            <div class="modal-content">
+                <img src="img/donasi/kesehatan.png" alt="Kesehatan">
+                <div class="donasi-content">
+                    <h3>Donasi Terkumpul</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, sapiente.</p>
+                    <a href="#"><i data-feather="gift"></i><span>Donasikan Sekarang</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="pendidikan-detail-modal">
+        <div class="modal-container">
+          <a href="#" class="close-icon-pendidikan"><i data-feather="x"></i></a>
+          <div class="modal-content">
+            <img src="img/donasi/pendidikan.png" alt="Pendidikan">
+            <div class="donasi-content">
+              <h3>Donasi Terkumpul</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, sapiente.</p>
+              <a href="#"><i data-feather="gift"></i><span>Donasikan Sekarang</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="modal" id="makanan-detail-modal">
+        <div class="modal-container">
+          <a href="#" class="close-icon-makanan"><i data-feather="x"></i></a>
+          <div class="modal-content">
+            <img src="img/donasi/makanan.png" alt="Makanan">
+            <div class="donasi-content">
+              <h3>Donasi Terkumpul</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, sapiente.</p>
+              <a href="#"><i data-feather="gift"></i><span>Donasikan Sekarang</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="info-detail-modal-kesehatan">
+        <div class="modal-container">
+          <a href="#" class="close-icon-makanan"><i data-feather="x"></i></a>
+          <div class="modal-content">
+            <img src="img/menu-bg-1.jpg" alt="Kesehatan">
+            <div class="donasi-content">
+              <h3>Donasi Kesehatan</h3>
+              <p>Donasi untuk kesehatan dunia adalah langkah penting yang dapat membantu meningkatkan peluang hidup orang-orang yang membutuhkan di luar sana. Cakupan donasi adalah wilayah Surabaya, Gresik, dan Sidoarjo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="info-detail-modal-pendidikan">
+        <div class="modal-container">
+          <a href="#" class="close-icon-makanan"><i data-feather="x"></i></a>
+          <div class="modal-content">
+            <img src="img/menu-bg-2.jpg" alt="Pendidikan">
+            <div class="donasi-content">
+              <h3>Donasi Pendidikan</h3>
+              <p>Donasi untuk pendidikan adalah langkah penting yang dapat membantu meningkatkan sumber daya manusia di negeri kita. Cakupan donasi adalah wilayah Surabaya, Gresik, dan Sidoarjo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="info-detail-modal-makanan">
+        <div class="modal-container">
+          <a href="#" class="close-icon-makanan"><i data-feather="x"></i></a>
+          <div class="modal-content">
+            <img src="img/menu-bg-3.jpg" alt="Makanan">
+            <div class="donasi-content">
+              <h3>Donasi Makanan</h3>
+              <p>Donasi untuk makanan adalah langkah penting yang dapat membantu meningkatkan gizi untuk orang-orang yang membutuhkan di negeri kita. Cakupan donasi adalah masjid wilayah Surabaya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal Box End -->
+
+    <!-- Feathers Icon -->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
